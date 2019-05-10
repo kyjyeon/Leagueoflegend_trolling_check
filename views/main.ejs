@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <style> @import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");</style>
+    <script>
+    $(document).ready(function(){
+
+
+      $("button#searchButton").click(function(){
+        var name = $("input").val();
+        location.href = "http://localhost:3000/search/" + name;
+      })
+    });
+    </script>
+  </head>
+  <body>
+    <div class="imgOpacity">
+    <div class="center">
+      <img src="http://postfiles5.naver.net/MjAxNzA1MTRfMjYz/MDAxNDk0NjkzMzQyMjA1.q2Lr8tHc36PRcyVYhCplqB4J868vV67CQr8l1MSduCkg.sfF_kI6oJZpMdOeKzFucmZXRoQXuSOI4M1IZhMPTp30g.PNG.yoonty21/logo.png?type=w580">
+    </div>
+    <div class="center2">
+   	<input type="text" class="input_text" placeholder="소환사 이름">
+    <span class="input-group-btn">
+      <button id="searchButton" class="btn btn-primary" type="button" onclick="search(name)">검색!</button>
+    </span>
+   </div>
+  </div>
+</body>
+</html>

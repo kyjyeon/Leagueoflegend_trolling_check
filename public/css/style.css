@@ -1,0 +1,58 @@
+
+body{
+  width:100vw;
+  height:100vh;
+
+  background-size:auto;
+}
+
+
+.imgOpacity{
+  width:100vw;
+  height:100vh;
+
+  background: #fff;
+  color: white;
+  color:rgba(1,1,1,1);
+}
+.header{
+  width:100vw;
+  height:5vh;
+  display:flex;
+  align-items:center;
+
+  justify-content:space-around;
+
+}
+.center{
+  width:100vw;
+  height:50vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+}
+
+.empty{
+  width:50vw;
+  height:30vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+}
+
+.center2{
+  width:100vw;
+  height:2vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+}
+
+.champImage{
+  resize: both;
+  max_width: 100px;
+  height: auto;
+}
+.fontsizeup{
+  font-size: 15px;
+}

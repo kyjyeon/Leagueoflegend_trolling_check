@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <style> @import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");</style>
+    <script>
+    $(document).ready(function(){
+
+
+      $("button#searchButton").click(function(){
+        var name = $("input").val();
+        location.href = "http://localhost:3000/search/" + name;
+      })
+    });
+    </script>
+  </head>
+  <body>
+    <div class="imgOpacity">
+      <div class="center">
+        <img src="http://postfiles5.naver.net/MjAxNzA1MTRfMjYz/MDAxNDk0NjkzMzQyMjA1.q2Lr8tHc36PRcyVYhCplqB4J868vV67CQr8l1MSduCkg.sfF_kI6oJZpMdOeKzFucmZXRoQXuSOI4M1IZhMPTp30g.PNG.yoonty21/logo.png?type=w580">
+      </div>
+      <div class="center">
+     	  <input type="text" class="input_text" placeholder="소환사 이름">
+        <span class="input-group-btn">
+        <button id="searchButton" class="btn btn-primary" type="button" onclick="search(name)">검색!</button>
+      </span>
+      </div>
+      <br></br>
+      <font size=10em>
+        <strong>
+          <%= c_summoner + "\n"%>
+        </strong>
+      </font>
+          <div class="center">
+          <img src= <%=c_imgtier%> width=120, height=120>
+          <span class="center">
+            <%= "Tier : " + c_tier + " " + c_rank + " / " + c_leaguePoint + "점"%>
+          </span>
+          <br class="center">
+          <%= "Win : " + c_wins + "   /   Lose : " + c_losses%>
+          </br>
+          </div>
+          <div class="center">
+          <%= "승률 : " + ((c_wins/(c_wins+c_losses))*100).toFixed(2) + "%" %>
+        </div>
+        <br></br>
+          <div class="center">
+            <strong>
+          <%= "트롤력"  %>
+          <%= "point: " + (1000000/c_point[c_id.length-1]).toFixed(2) %>
+        </strong>
+        </div>
+      <% for (var i=0; i<c_id.length-1; i++){ %>
+        <div class="champImage">
+          <div class="center">
+          <img src= <%=c_pic[i]%> width=50, height=50>
+          <%= c_name[i] %>
+          <%= "point: " + (1000000/c_point[i]).toFixed(2) %>
+          <% } %>
+        </div>
+</div>
+</body>
+</html>
