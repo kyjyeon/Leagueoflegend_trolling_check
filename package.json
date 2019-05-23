@@ -1,7 +1,7 @@
 {
-  "name": "yoon",
+  "name": "kyjyeon",
   "version": "1.0.0",
-  "description": "",
+  "description": "LOL Trolling check",
   "main": "App.js",
   "dependencies": {
     "ejs": "^2.6.1",
