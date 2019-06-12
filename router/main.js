@@ -2,26 +2,26 @@ module.exports = function(app){
 
 var request = require("request");
 var urlenconde = require('urlencode');
-var apikey = "RGAPI-3310737b-003b-4e7f-b57a-817633ff2836"//api
+var apikey = ""//api
 
 var profileIconId;  //아이콘 번호
 var revisionDate; //수정날짜
-var id; //소환사ID
-var accountId; //계정Id
-var name; //소환사 이름
-var summonerLevel;  //소환사 레벨
+var id; //summonerID
+var accountId; //accouontId
+var name; //summoner name
+var summonerLevel;  //summoner level
 
 var startIndex;
 var endIndex;
 var totalGames;
-var matches;  //경기정보
+var matches;  //match status
 
   app.get('/', function(req, res) {
   	  res.render('main', { title: 'R U TROLL?' });
   });
 
   app.get('/search/:username/', function(req, res){
-    //롤 api url
+    //lol api url
     name = req.params.username;
     var nameUrl = "https://kr.api.riotgames.com/lol/summoner/v3/summoners/by-name/" + urlenconde(name)+"?api_key="+ apikey;
     request(nameUrl,function(error,response,body){
