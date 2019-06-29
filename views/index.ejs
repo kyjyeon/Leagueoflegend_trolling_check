@@ -25,9 +25,9 @@
         <img src="http://postfiles5.naver.net/MjAxNzA1MTRfMjYz/MDAxNDk0NjkzMzQyMjA1.q2Lr8tHc36PRcyVYhCplqB4J868vV67CQr8l1MSduCkg.sfF_kI6oJZpMdOeKzFucmZXRoQXuSOI4M1IZhMPTp30g.PNG.yoonty21/logo.png?type=w580">
       </div>
       <div class="center">
-     	  <input type="text" class="input_text" placeholder="소환사 이름">
+     	  <input type="text" class="input_text" placeholder="Summoner Name">
         <span class="input-group-btn">
-        <button id="searchButton" class="btn btn-primary" type="button" onclick="search(name)">검색!</button>
+        <button id="searchButton" class="btn btn-primary" type="button" onclick="search(name)">Search!</button>
       </span>
       </div>
       <br></br>
@@ -46,12 +46,12 @@
           </br>
           </div>
           <div class="center">
-          <%= "승률 : " + ((c_wins/(c_wins+c_losses))*100).toFixed(2) + "%" %>
+          <%= "Win Rate : " + ((c_wins/(c_wins+c_losses))*100).toFixed(2) + "%" %>
         </div>
         <br></br>
           <div class="center">
             <strong>
-          <%= "트롤력"  %>
+          <%= "Troll Rate"  %>
           <%= "point: " + (1000000/c_point[c_id.length-1]).toFixed(2) %>
         </strong>
         </div>
