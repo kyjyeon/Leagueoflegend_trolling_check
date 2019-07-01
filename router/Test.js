@@ -2,14 +2,14 @@ module.exports = function(app){
 
 var request = require("request");
 var urlenconde = require('urlencode');
-var apikey = "RGAPI-1bb58578-0c5c-4308-ae88-e3292615553d"//api
+var apikey = ""//api
 
-var profileIconId;  //아이콘 번호
-var revisionDate; //수정날짜
-var id; //소환사ID
-var accountId; //계정Id
-var name; //소환사 이름
-var summonerLevel;  //소환사 레벨
+var profileIconId; 
+var revisionDate;
+var id;
+var accountId; /
+var name; //
+var summonerLevel;
 
 
   app.get('/', function(req, res) {
