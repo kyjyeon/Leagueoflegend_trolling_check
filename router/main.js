@@ -4,8 +4,8 @@ var request = require("request");
 var urlenconde = require('urlencode');
 var apikey = ""//api
 
-var profileIconId;  //아이콘 번호
-var revisionDate; //수정날짜
+var profileIconId;  //ICON number
+var revisionDate; //revision Date
 var id; //summonerID
 var accountId; //accouontId
 var name; //summoner name
