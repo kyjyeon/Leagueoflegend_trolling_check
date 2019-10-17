@@ -2,7 +2,7 @@ module.exports = function(app){
 
 var request = require("request");
 var urlenconde = require('urlencode');
-var apikey = ""//api
+var apikey = ""//api password(Need to register in LOL api web)
 
 var profileIconId;  //ICON number
 var revisionDate; //revision Date
